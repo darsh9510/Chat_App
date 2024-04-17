@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Signup</title>
+</head>
+
+<body class="bg-gray-100">
+  <nav class="flex items-center justify-between bg-blue-500 p-4">
+    <div class="flex items-center">
+      <span class="text-lg font-bold text-white">ChatApp</span>
+    </div>
+    <div class="flex items-center">
+      <a href="{%url 'home'%}" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Home</a>
+    
+    </div>
+  </nav>
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h2 class="text-2xl font-bold mb-4">Enter Moderator Details</h2>
+      <form action="" method="post">
+        {%csrf_token%}
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+          <input type="text" id="modarator_name" name="modarator_name"  class="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div class="mb-4">
+          <label for="no" class="block text-gray-700 text-sm font-bold mb-2">Moderator ID</label>
+          <input type="text" id="modarator_id" name="modarator_id"  class="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div class="mb-4">
+            <label for="confirm-password" class="block text-gray-700 text-sm font-bold mb-2"> Password</label>
+            <input type="password" id="password" name="password"  class="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          </div>
+        <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2 w-full font-bold">Enter</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
